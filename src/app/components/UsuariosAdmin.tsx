@@ -8,7 +8,7 @@ type Usuario = {
   id: string;
   nombre: string;
   email: string;
-  tipo: 'Cliente' | 'Médico' | 'Empleado';
+  tipo: 'Cliente' | 'Médico' | 'Colaborador';
   estado: 'Activo' | 'Inactivo';
   fechaRegistro: string;
 };
@@ -35,10 +35,10 @@ export function UsuariosAdmin() {
     { id: '2', nombre: 'Dr. Carlos Rodríguez', email: 'carlos.rodriguez@benavides.com', tipo: 'Médico', estado: 'Activo', fechaRegistro: '10/02/2026' },
     { id: '3', nombre: 'María López Silva', email: 'maria.lopez@email.com', tipo: 'Cliente', estado: 'Activo', fechaRegistro: '20/03/2026' },
     { id: '4', nombre: 'Dra. Laura Fernández', email: 'laura.fernandez@benavides.com', tipo: 'Médico', estado: 'Activo', fechaRegistro: '05/01/2026' },
-    { id: '5', nombre: 'Pedro Sánchez Díaz', email: 'pedro.sanchez@benavides.com', tipo: 'Empleado', estado: 'Activo', fechaRegistro: '12/03/2026' },
+    { id: '5', nombre: 'Pedro Sánchez Díaz', email: 'pedro.sanchez@benavides.com', tipo: 'Colaborador', estado: 'Activo', fechaRegistro: '12/03/2026' },
     { id: '6', nombre: 'Isabel Torres Ruiz', email: 'isabel.torres@email.com', tipo: 'Cliente', estado: 'Inactivo', fechaRegistro: '08/02/2026' },
     { id: '7', nombre: 'Dr. Miguel Ángel Morales', email: 'miguel.morales@benavides.com', tipo: 'Médico', estado: 'Activo', fechaRegistro: '18/01/2026' },
-    { id: '8', nombre: 'Carmen Jiménez Pérez', email: 'carmen.jimenez@benavides.com', tipo: 'Empleado', estado: 'Activo', fechaRegistro: '25/02/2026' },
+    { id: '8', nombre: 'Carmen Jiménez Pérez', email: 'carmen.jimenez@benavides.com', tipo: 'Colaborador', estado: 'Activo', fechaRegistro: '25/02/2026' },
   ];
 
   const filteredUsuarios = usuarios.filter(usuario =>
@@ -51,7 +51,7 @@ export function UsuariosAdmin() {
     switch (tipo) {
       case 'Cliente': return 'bg-[#001389]/10 text-[#001389]';
       case 'Médico': return 'bg-[#D52A1D]/10 text-[#D52A1D]';
-      case 'Empleado': return 'bg-green-100 text-green-700';
+      case 'Colaborador': return 'bg-green-100 text-green-700';
       default: return 'bg-gray-100 text-gray-700';
     }
   };

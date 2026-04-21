@@ -69,7 +69,7 @@ export function DetallePaciente() {
       <header className="sticky top-0 z-[100] bg-[#001389] shadow-md border-b border-white/10">
         <div className="max-w-3xl mx-auto px-4 py-4 flex items-center gap-3">
           <button
-            onClick={() => navigate('/empleado/home')}
+            onClick={() => navigate('/colaborador/home')}
             className="p-2 rounded-xl hover:bg-white/10 transition-all"
           >
             <ArrowLeft className="w-6 h-6 text-white" />
@@ -136,7 +136,7 @@ export function DetallePaciente() {
             return (
               <button
                 key={bloque.id}
-                onClick={() => navigate(`/empleado/paciente/${id}/${bloque.id}`)}
+                onClick={() => navigate(`/colaborador/paciente/${id}/${bloque.id}`)}
                 className={`relative p-6 rounded-3xl bg-white/50 border border-white/60 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex flex-col items-center justify-center gap-4 min-h-[160px]
                   ${isLast && isOddTotal ? 'col-span-2 max-w-[calc(50%-8px)] mx-auto w-full' : ''}`}
               >

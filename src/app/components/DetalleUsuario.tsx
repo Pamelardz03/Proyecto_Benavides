@@ -274,7 +274,7 @@ export function DetalleUsuario() {
                   <option value="">Seleccionar</option>
                   <option value="cliente">Cliente</option>
                   <option value="medico">Médico</option>
-                  <option value="empleado">Empleado</option>
+                  <option value="colaborador">Colaborador</option>
                   <option value="administrador">Administrador</option>
                 </select>
               </div>

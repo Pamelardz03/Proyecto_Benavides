@@ -119,7 +119,7 @@ export function EmpleadoHome() {
                                     <Mail className="w-5 h-5" />
                                 </button>
                                 <button
-                                    onClick={() => navigate(`/empleado/paciente/${paciente.id}`)}
+                                    onClick={() => navigate(`/colaborador/paciente/${paciente.id}`)}
                                     className="ml-2 p-3 rounded-2xl bg-[#001389] text-white hover:bg-[#001389]/90 shadow-lg transition-all"
                                 >
                                     <ChevronRight className="w-5 h-5" />

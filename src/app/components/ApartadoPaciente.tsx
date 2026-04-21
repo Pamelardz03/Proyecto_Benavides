@@ -106,7 +106,7 @@ export function ApartadoPaciente() {
       {/* Header */}
       <header className="sticky top-0 z-40 bg-[#001389] backdrop-blur-xl shadow-lg">
         <div className="max-w-3xl mx-auto px-4 py-4 flex items-center gap-3">
-          <button onClick={() => navigate(`/empleado/paciente/${id}`)} className="p-2 rounded-xl hover:bg-white/10 transition-all">
+          <button onClick={() => navigate(`/colaborador/paciente/${id}`)} className="p-2 rounded-xl hover:bg-white/10 transition-all">
             <ArrowLeft className="w-6 h-6 text-white" />
           </button>
           <h1 className="text-lg font-bold text-white">{config.label}</h1>
@@ -153,7 +153,7 @@ export function ApartadoPaciente() {
                 ))}
                 <div className="flex justify-end mt-4">
                   <button
-                    onClick={() => navigate(`/empleado/paciente/${id}/${apartado}/${item.id}/archivos`)}
+                    onClick={() => navigate(`/colaborador/paciente/${id}/${apartado}/${item.id}/archivos`)}
                     className={`flex items-center gap-2 px-5 py-2 rounded-full text-white text-sm font-semibold shadow transition-all ${config.btnColor}`}
                   >
                     <FileText className="w-4 h-4" />

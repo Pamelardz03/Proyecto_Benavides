@@ -60,8 +60,8 @@ export function Verification() {
     // Redirigir según el tipo de usuario
     if (userType === 'cliente') {
       navigate('/cliente/home');
-    } else if (userType === 'empleado') {
-      navigate('/empleado/home');
+    } else if (userType === 'colaborador') {
+      navigate('/colaborador/home');
     } else if (userType === 'admin') {
       navigate('/admin/home');
     }
@@ -76,7 +76,7 @@ export function Verification() {
   const getUserTypeLabel = (type: string) => {
     const labels: { [key: string]: string } = {
       cliente: 'Cliente',
-      empleado: 'Empleado',
+      colaborador: 'Colaborador',
       admin: 'Administrador'
     };
     return labels[type] || 'Cliente';

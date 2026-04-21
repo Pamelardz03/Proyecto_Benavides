@@ -3,7 +3,7 @@ import { Eye, EyeOff, User, ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router';
 import imgBenavides from '../../imports/logo-anterior-convertido-de-svg.png';
 
-type UserType = 'cliente' | 'empleado' | 'admin';
+type UserType = 'cliente' | 'colaborador' | 'admin';
 
 export function Register() {
   const [formData, setFormData] = useState({
@@ -30,7 +30,7 @@ export function Register() {
   const getUserTypeLabel = (type: UserType) => {
     const labels = {
       cliente: 'Cliente',
-      empleado: 'Empleado',
+      colaborador: 'Colaborador',
       admin: 'Administrador'
     };
     return labels[type];
@@ -61,7 +61,7 @@ export function Register() {
 
           {showUserMenu && (
             <div className="absolute top-full right-0 mt-2 w-48 rounded-2xl bg-white/80 backdrop-blur-xl border border-white/60 shadow-2xl overflow-hidden">
-              {(['cliente', 'empleado', 'admin'] as UserType[]).map((type) => (
+              {(['cliente', 'colaborador', 'admin'] as UserType[]).map((type) => (
                 <button
                   key={type}
                   onClick={() => {

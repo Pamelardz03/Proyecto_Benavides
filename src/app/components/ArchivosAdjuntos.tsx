@@ -37,7 +37,7 @@ export function ArchivosAdjuntos() {
       <header className="sticky top-0 z-40 bg-[#001389] backdrop-blur-xl shadow-lg">
         <div className="max-w-3xl mx-auto px-4 py-4 flex items-center gap-3">
           <button
-            onClick={() => navigate(`/empleado/paciente/${id}/${apartado}`)}
+            onClick={() => navigate(`/colaborador/paciente/${id}/${apartado}`)}
             className="p-2 rounded-xl hover:bg-white/10 transition-all"
           >
             <ArrowLeft className="w-6 h-6 text-white" />
