@@ -116,7 +116,7 @@ export function MisMedicos() {
 
       {/* Header */}
       <header className="sticky top-0 z-40 bg-[#001389] backdrop-blur-xl border-b border-[#001389]/60 shadow-lg">
-        <div className="max-w-md mx-auto px-4 py-4">
+        <div className="max-w-4xl mx-auto px-4 py-4">
           <div className="flex items-center gap-4">
             <button
               onClick={() => navigate('/cliente/home')}
@@ -130,7 +130,7 @@ export function MisMedicos() {
       </header>
 
       {/* Main Content */}
-      <main className="relative z-10 max-w-md mx-auto px-4 py-6 pb-24">
+      <main className="relative z-10 max-w-4xl mx-auto px-4 py-6 pb-24">
         <div className="space-y-4">
           {medicos.map((medico) => (
             <div

@@ -92,7 +92,7 @@ export function AdministrarPermisos() {
 
       {/* Header */}
       <header className="sticky top-0 z-40 bg-[#001389] backdrop-blur-xl border-b border-[#001389]/60 shadow-lg">
-        <div className="max-w-md mx-auto px-4 py-4">
+        <div className="max-w-4xl mx-auto px-4 py-4">
           <div className="flex items-center gap-4">
             <button
               onClick={() => navigate('/cliente/mis-medicos')}
@@ -106,7 +106,7 @@ export function AdministrarPermisos() {
       </header>
 
       {/* Main Content */}
-      <main className="relative z-10 max-w-md mx-auto px-4 py-6 pb-24">
+      <main className="relative z-10 max-w-4xl mx-auto px-4 py-6 pb-24">
         {/* Médico Info Card */}
         <div className="bg-white/70 backdrop-blur-xl rounded-3xl shadow-lg border border-white/60 p-6 mb-6">
           <div className="flex items-center gap-4 mb-4">
