@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Eye, EyeOff, User, ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router';
-import imgBenavides from '../../imports/logo-anterior-convertido-de-svg.png';
+import imgBenavides from '../../imports/Logo-BenavidesAzul.png';
 
 type UserType = 'cliente' | 'colaborador' | 'admin';
 

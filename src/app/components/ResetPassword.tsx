@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router';
 import { ArrowLeft, Lock, Eye, EyeOff, CheckCircle2 } from 'lucide-react';
-import imgBenavides from '../../imports/logo-anterior-convertido-de-svg.png';
+import imgBenavides from '../../imports/Logo-BenavidesAzul.png';
 
 export function ResetPassword() {
   const [newPassword, setNewPassword] = useState('');

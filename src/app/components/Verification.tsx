@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { ArrowLeft, Shield } from 'lucide-react';
 import { useNavigate, useSearchParams } from 'react-router';
-import imgBenavides from '../../imports/logo-anterior-convertido-de-svg.png';
+import imgBenavides from '../../imports/Logo-BenavidesAzul.png';
 
 export function Verification() {
   const [code, setCode] = useState(['', '', '', '', '', '']);
