@@ -162,14 +162,14 @@ export function ColaboradorHome() {
                   <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#001389] to-[#001389]/80 flex items-center justify-center text-white font-bold text-base flex-shrink-0">
                     {getInitials(paciente.nombre)}
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-base font-bold text-gray-900 group-hover:text-[#001389] transition-colors truncate">
+                  <div className="flex-1">
+                    <h3 className="text-base font-bold text-gray-900 group-hover:text-[#001389] transition-colors">
                       {paciente.nombre}
                     </h3>
                     <div className="flex items-center gap-2 mt-0.5">
                       <p className="text-sm text-gray-500">{paciente.edad} años</p>
                       <span className="w-1 h-1 rounded-full bg-gray-300" />
-                      <p className="text-sm font-medium text-[#001389]/70 truncate">{paciente.condicion}</p>
+                      <p className="text-sm font-medium text-[#001389]/70">{paciente.condicion}</p>
                     </div>
                     <p className="text-[10px] text-gray-400 mt-0.5 uppercase tracking-widest">
                       Última visita: {paciente.ultimaVisita}
