@@ -73,7 +73,7 @@ export function ClienteHome() {
       </header>
 
       {/* Main Content */}
-      <main className="relative z-10 max-w-md mx-auto px-4 py-6 pb-24 md:pb-6 min-h-[calc(100vh-200px)]">
+      <main className="relative z-10 max-w-4xl mx-auto px-4 py-6 pb-24 md:pb-6 min-h-[calc(100vh-200px)]">
 
         {/* Servicios */}
         <section className="mb-8">
