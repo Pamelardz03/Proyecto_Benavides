@@ -144,7 +144,7 @@ export function UsuariosAdmin() {
 
       {/* Header */}
       <header className="sticky top-0 z-40 bg-[#001389] backdrop-blur-xl border-b border-[#001389]/60 shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 py-3 md:py-4">
+        <div className="max-w-4xl mx-auto px-4 py-3 md:py-4">
           <div className="flex items-center justify-between">
             {/* Logo y Back Button */}
             <div className="flex items-center gap-2 md:gap-3">
@@ -175,7 +175,7 @@ export function UsuariosAdmin() {
       </header>
 
       {/* Main Content */}
-      <main className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 py-4 md:py-6 pb-20 md:pb-24">
+      <main className="relative z-10 max-w-4xl mx-auto px-4 md:px-6 py-4 md:py-6 pb-20 md:pb-24">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6">
           <div>
