@@ -11,7 +11,7 @@ import { AdministrarPermisos } from "./components/AdministrarPermisos";
 import { AdminHome } from "./components/AdminHome";
 import { UsuariosAdmin } from "./components/UsuariosAdmin";
 import { DetalleUsuario } from "./components/DetalleUsuario";
-import { colaboradorHome } from "./components/colaboradorHome";
+import { colaboradorHome } from "./components/ColaboradorHome";
 import { DetallePaciente } from "./components/DetallePaciente";
 import { ApartadoPaciente } from "./components/ApartadoPaciente";
 import { ArchivosAdjuntos } from "./components/ArchivosAdjuntos";
