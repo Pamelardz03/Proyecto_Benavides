@@ -2,12 +2,6 @@ import { useState } from 'react';
 import { Search, User, MapPin, Bell, Home as HomeIcon, Clock, ChevronRight, Stethoscope, ClipboardList, FileText, History } from 'lucide-react';
 import { useNavigate } from 'react-router';
 import imgBenavides from '../../imports/logo-anterior-convertido-de-svg.png';
-import imgMedicamentos from '../../imports/image-24.png';
-import imgConsultas from '../../imports/image-25.png';
-import imgVitaminas from '../../imports/image-26.png';
-import imgCuidado from '../../imports/image-27.png';
-import imgBelleza from '../../imports/image-28.png';
-import imgBebe from '../../imports/image-29.png';
 import imgNoticias from '../../imports/Screenshot_2026-04-16_080747-removebg-preview.png';
 
 type Category = {
@@ -16,25 +10,9 @@ type Category = {
   icon: React.ReactNode;
 };
 
-type QuickAction = {
-  id: string;
-  name: string;
-  image: string;
-};
-
 export function ClienteHome() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const navigate = useNavigate();
-
-  const quickActions: QuickAction[] = [
-    { id: 'alimentos-hogar', name: 'Alimentos y Hogar', image: imgMedicamentos },
-    { id: 'bienestar-sexual', name: 'Bienestar sexual', image: imgConsultas },
-    { id: 'cuidado-prevencion', name: 'Cuidado y prevención', image: imgVitaminas },
-    { id: 'bebes', name: 'Bebés', image: imgCuidado },
-    { id: 'dermocosmeticos', name: 'Dermocosméticos', image: imgBelleza },
-    { id: 'cuidado-personal', name: 'Cuidado personal', image: imgBebe },
-  ];
 
   const categories: Category[] = [
     { id: 'mis-medicos', name: 'Mis médicos', icon: <Stethoscope className="w-10 h-10" /> },
@@ -44,61 +22,43 @@ export function ClienteHome() {
   ];
 
   const handleCategoryClick = (categoryId: string) => {
-    setSelectedCategory(categoryId);
     if (categoryId === 'mis-medicos') {
       navigate('/cliente/mis-medicos');
     }
-    // Aquí puedes agregar navegación para otras categorías
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#E6E8F5] via-white to-[#E6E8F5]">
-      {/* Liquid Glass Background Effects */}
+      {/* Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#001389] rounded-full opacity-10 blur-3xl animate-pulse" 
-             style={{ animationDuration: '4s' }}></div>
-        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#D52A1D] rounded-full opacity-10 blur-3xl animate-pulse" 
-             style={{ animationDuration: '6s', animationDelay: '1s' }}></div>
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#001389] rounded-full opacity-10 blur-3xl animate-pulse" style={{ animationDuration: '4s' }} />
+        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#D52A1D] rounded-full opacity-10 blur-3xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '1s' }} />
       </div>
 
       {/* Header */}
       <header className="sticky top-0 z-40 bg-[#001389] backdrop-blur-xl border-b border-[#001389]/60 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 py-4">
-          {/* Top Bar */}
           <div className="flex items-center justify-between mb-4">
-            {/* Logo */}
-            <div className="flex items-center gap-2">
-              <img src={imgBenavides} alt="Benavides" className="h-12 w-auto" />
-            </div>
-
-            {/* Right Actions */}
+            <img src={imgBenavides} alt="Benavides" className="h-12 w-auto" />
             <div className="flex items-center gap-3">
               <button className="relative p-2 rounded-xl hover:bg-white/10 transition-all">
                 <Bell className="w-6 h-6 text-white" />
-                <span className="absolute top-1 right-1 w-2 h-2 bg-[#D52A1D] rounded-full"></span>
+                <span className="absolute top-1 right-1 w-2 h-2 bg-[#D52A1D] rounded-full" />
               </button>
-              <button 
-                onClick={() => navigate('/')}
-                className="p-2 rounded-xl hover:bg-white/10 transition-all"
-              >
+              <button onClick={() => navigate('/')} className="p-2 rounded-xl hover:bg-white/10 transition-all">
                 <User className="w-6 h-6 text-white" />
               </button>
             </div>
           </div>
-
-          {/* Location */}
           <div className="flex items-center gap-2 text-sm mb-4">
             <MapPin className="w-4 h-4 text-[#D52A1D]" />
             <span className="text-white/90">Entregar en:</span>
             <button className="font-medium text-white hover:underline flex items-center gap-1">
-              Av. Principal 123, Col. Centro
-              <span className="text-white">→</span>
+              Av. Principal 123, Col. Centro <span className="text-white">→</span>
             </button>
             <Clock className="w-4 h-4 text-white/70 ml-2" />
             <span className="text-white/90">25-35 min</span>
           </div>
-
-          {/* Search Bar */}
           <div className="relative">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
             <input
@@ -106,52 +66,27 @@ export function ClienteHome() {
               placeholder="Buscar medicamentos, vitaminas, cuidado personal..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 rounded-xl bg-white/90 backdrop-blur-sm border border-white/60 focus:border-white focus:ring-2 focus:ring-white/20 transition-all duration-300 outline-none"
+              className="w-full pl-12 pr-4 py-3 rounded-xl bg-white/90 backdrop-blur-sm border border-white/60 focus:border-white focus:ring-2 focus:ring-white/20 transition-all outline-none"
             />
           </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="relative z-10 max-w-7xl mx-auto px-4 py-6 pb-24 min-h-[calc(100vh-200px)]">
-        {/* Quick Actions - Horizontal Scroll */}
-        <section className="mb-8">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4 px-2">Categorías</h2>
-          <div className="overflow-x-auto pb-4" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-            <div className="flex gap-6 px-2">
-              {quickActions.map((action) => (
-                <button
-                  key={action.id}
-                  className="flex-shrink-0 flex flex-col items-center gap-3 transition-all duration-300 hover:scale-110"
-                >
-                  <div className="w-24 h-24 rounded-full flex items-center justify-center overflow-hidden shadow-xl bg-white border-4 border-white/80">
-                    <img src={action.image} alt={action.name} className="w-full h-full object-cover" />
-                  </div>
-                  <span className="text-xs font-medium text-gray-800 text-center max-w-[90px]">
-                    {action.name}
-                  </span>
-                </button>
-              ))}
-            </div>
-          </div>
-        </section>
+      <main className="relative z-10 max-w-7xl mx-auto px-4 py-6 pb-24 md:pb-6 min-h-[calc(100vh-200px)]">
 
-        {/* Categories */}
-        <section className="h-full mb-8">
+        {/* Servicios */}
+        <section className="mb-8">
           <h2 className="text-xl font-semibold text-gray-800 mb-4 px-2">Servicios</h2>
-          <div className="grid grid-cols-2 gap-4 h-full">
+          <div className="grid grid-cols-2 gap-4">
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => handleCategoryClick(category.id)}
                 className="relative p-6 rounded-3xl bg-white/50 backdrop-blur-sm border border-white/60 transition-all duration-300 hover:shadow-xl hover:scale-105 flex flex-col items-center justify-center gap-4 min-h-[200px]"
               >
-                <div className="text-[#001389]">
-                  {category.icon}
-                </div>
-                <span className="text-sm font-medium text-gray-800 text-center">
-                  {category.name}
-                </span>
+                <div className="text-[#001389]">{category.icon}</div>
+                <span className="text-sm font-medium text-gray-800 text-center">{category.name}</span>
                 <div className="absolute bottom-4 right-4 text-[#001389]">
                   <ChevronRight className="w-5 h-5" />
                 </div>
@@ -164,17 +99,14 @@ export function ClienteHome() {
         <section className="mb-8">
           <h2 className="text-xl font-semibold text-gray-800 mb-4 px-2">Noticias</h2>
           <div className="flex justify-center items-center px-2">
-            <img 
-              src={imgNoticias} 
-              alt="Noticias Benavides" 
-              className="max-w-full h-auto rounded-2xl shadow-lg"
-            />
+            <img src={imgNoticias} alt="Noticias Benavides" className="max-w-full h-auto rounded-2xl shadow-lg" />
           </div>
         </section>
+
       </main>
 
-      {/* Bottom Navigation */}
-      <nav className="fixed bottom-0 left-0 right-0 z-50 bg-[#001389] backdrop-blur-xl border-t border-[#001389]/60 shadow-2xl">
+      {/* Bottom Navigation — solo en móvil */}
+      <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-[#001389] backdrop-blur-xl border-t border-[#001389]/60 shadow-2xl">
         <div className="max-w-7xl mx-auto px-4 py-3">
           <div className="grid grid-cols-4 gap-2">
             <button className="flex flex-col items-center gap-1 py-2 text-white">
@@ -195,10 +127,7 @@ export function ClienteHome() {
               </div>
               <span className="text-xs font-medium">Historial</span>
             </button>
-            <button 
-              onClick={() => navigate('/')}
-              className="flex flex-col items-center gap-1 py-2 text-white/70 hover:text-white transition-colors"
-            >
+            <button onClick={() => navigate('/')} className="flex flex-col items-center gap-1 py-2 text-white/70 hover:text-white transition-colors">
               <div className="w-12 h-12 rounded-xl hover:bg-white/20 flex items-center justify-center transition-colors">
                 <User className="w-6 h-6" />
               </div>
