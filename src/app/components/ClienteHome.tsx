@@ -37,7 +37,7 @@ export function ClienteHome() {
 
       {/* Header */}
       <header className="sticky top-0 z-40 bg-[#001389] backdrop-blur-xl border-b border-[#001389]/60 shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 py-4">
+        <div className="max-w-md mx-auto px-4 py-4">
           <div className="flex items-center justify-between mb-4">
             <img src={imgBenavides} alt="Benavides" className="h-12 w-auto" />
             <div className="flex items-center gap-3">
@@ -73,7 +73,7 @@ export function ClienteHome() {
       </header>
 
       {/* Main Content */}
-      <main className="relative z-10 max-w-7xl mx-auto px-4 py-6 pb-24 md:pb-6 min-h-[calc(100vh-200px)]">
+      <main className="relative z-10 max-w-md mx-auto px-4 py-6 pb-24 md:pb-6 min-h-[calc(100vh-200px)]">
 
         {/* Servicios */}
         <section className="mb-8">
@@ -107,7 +107,7 @@ export function ClienteHome() {
 
       {/* Bottom Navigation — solo en móvil */}
       <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-[#001389] backdrop-blur-xl border-t border-[#001389]/60 shadow-2xl">
-        <div className="max-w-7xl mx-auto px-4 py-3">
+        <div className="max-w-md mx-auto px-4 py-3">
           <div className="grid grid-cols-4 gap-2">
             <button className="flex flex-col items-center gap-1 py-2 text-white">
               <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
