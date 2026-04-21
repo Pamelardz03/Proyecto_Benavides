@@ -11,7 +11,7 @@ import { AdministrarPermisos } from "./components/AdministrarPermisos";
 import { AdminHome } from "./components/AdminHome";
 import { UsuariosAdmin } from "./components/UsuariosAdmin";
 import { DetalleUsuario } from "./components/DetalleUsuario";
-import { EmpleadoHome } from "./components/EmpleadoHome";
+import { colaboradorHome } from "./components/colaboradorHome";
 import { DetallePaciente } from "./components/DetallePaciente";
 import { ApartadoPaciente } from "./components/ApartadoPaciente";
 import { ArchivosAdjuntos } from "./components/ArchivosAdjuntos";
@@ -26,10 +26,10 @@ export const router = createHashRouter([
   { path: "/cliente/home", Component: ClienteHome },
   { path: "/cliente/mis-medicos", Component: MisMedicos },
   { path: "/cliente/administrar-permisos/:medicoId", Component: AdministrarPermisos },
-  { path: "/empleado/home", Component: EmpleadoHome },
-  { path: "/empleado/paciente/:id", Component: DetallePaciente },
-  { path: "/empleado/paciente/:id/:apartado", Component: ApartadoPaciente },
-  { path: "/empleado/paciente/:id/:apartado/:itemId/archivos", Component: ArchivosAdjuntos },
+  { path: "/colaborador/home", Component: colaboradorHome },
+  { path: "/colaborador/paciente/:id", Component: DetallePaciente },
+  { path: "/colaborador/paciente/:id/:apartado", Component: ApartadoPaciente },
+  { path: "/colaborador/paciente/:id/:apartado/:itemId/archivos", Component: ArchivosAdjuntos },
   { path: "/admin", Component: AdminHome },
   { path: "/admin/home", Component: AdminHome },
   { path: "/admin/usuarios", Component: UsuariosAdmin },

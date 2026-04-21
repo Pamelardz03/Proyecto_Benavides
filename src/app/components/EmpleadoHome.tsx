@@ -26,7 +26,7 @@ const pacientes: Paciente[] = [
     { id: '10', nombre: 'Héctor Villanueva Cruz', edad: 48, telefono: '555-012-3456', email: 'hector.villanueva@email.com', ultimaVisita: '12 Mar 2026', condicion: 'Hipotiroidismo' },
 ];
 
-export function EmpleadoHome() {
+export function colaboradorHome() {
     const [searchQuery, setSearchQuery] = useState('');
     const navigate = useNavigate();
 

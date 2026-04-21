@@ -9,13 +9,13 @@ export function AdminHome() {
 
   // Datos de ejemplo para las gráficas
   const loginData = [
-    { name: 'Lun', medicos: 45, empleados: 32, clientes: 189 },
-    { name: 'Mar', medicos: 52, empleados: 38, clientes: 210 },
-    { name: 'Mié', medicos: 48, empleados: 35, clientes: 198 },
-    { name: 'Jue', medicos: 61, empleados: 42, clientes: 234 },
-    { name: 'Vie', medicos: 55, empleados: 40, clientes: 221 },
-    { name: 'Sáb', medicos: 38, empleados: 28, clientes: 167 },
-    { name: 'Dom', medicos: 30, empleados: 22, clientes: 145 },
+    { name: 'Lun', medicos: 45, colaboradors: 32, clientes: 189 },
+    { name: 'Mar', medicos: 52, colaboradors: 38, clientes: 210 },
+    { name: 'Mié', medicos: 48, colaboradors: 35, clientes: 198 },
+    { name: 'Jue', medicos: 61, colaboradors: 42, clientes: 234 },
+    { name: 'Vie', medicos: 55, colaboradors: 40, clientes: 221 },
+    { name: 'Sáb', medicos: 38, colaboradors: 28, clientes: 167 },
+    { name: 'Dom', medicos: 30, colaboradors: 22, clientes: 145 },
   ];
 
   const doctoresRegistradosData = [
@@ -104,7 +104,7 @@ export function AdminHome() {
                     <span className="text-xl font-bold text-[#D52A1D]">89</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600">Empleados</span>
+                    <span className="text-sm text-gray-600">colaboradors</span>
                     <span className="text-xl font-bold text-green-600">156</span>
                   </div>
                 </div>
@@ -179,7 +179,7 @@ export function AdminHome() {
                   />
                   <Area key="area-clientes" type="monotone" dataKey="clientes" stackId="1" stroke="#001389" fill="#001389" fillOpacity={0.6} />
                   <Area key="area-medicos" type="monotone" dataKey="medicos" stackId="1" stroke="#D52A1D" fill="#D52A1D" fillOpacity={0.6} />
-                  <Area key="area-empleados" type="monotone" dataKey="empleados" stackId="1" stroke="#4CAF50" fill="#4CAF50" fillOpacity={0.6} />
+                  <Area key="area-colaboradors" type="monotone" dataKey="colaboradors" stackId="1" stroke="#4CAF50" fill="#4CAF50" fillOpacity={0.6} />
                 </AreaChart>
               </ResponsiveContainer>
               <div className="flex items-center justify-center gap-6 mt-4">
@@ -193,7 +193,7 @@ export function AdminHome() {
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-[#4CAF50]"></div>
-                  <span className="text-xs text-gray-600">Empleados</span>
+                  <span className="text-xs text-gray-600">colaboradors</span>
                 </div>
               </div>
             </div>
