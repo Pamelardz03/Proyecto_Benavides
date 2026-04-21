@@ -104,7 +104,7 @@ export function AdminHome() {
                     <span className="text-xl font-bold text-[#D52A1D]">89</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600">colaboradors</span>
+                    <span className="text-sm text-gray-600">Colaboradores</span>
                     <span className="text-xl font-bold text-green-600">156</span>
                   </div>
                 </div>
